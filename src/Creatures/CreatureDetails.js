@@ -3,14 +3,17 @@ import './image-display.css';
 import { Link } from 'react-router-dom';
 
 const CreatureDetails = ({ id, name, image, bio, type }) => {
+  console.log(id, name, image, bio, type);
   return (
     <div>
-      <Link to={`/${type}`} className='back-btn'>◀ back</Link>
+      <Link to={`/${type}`} className="back-btn">
+        ◀ back
+      </Link>
       <h1>{name}</h1>
-      <img src={image} className='app-img-no-hover'/>
-      <p className='creature-bio'>{bio}</p>
+      <img src={image} className="app-img-no-hover" />
+      <p className="creature-bio">{bio}</p>
     </div>
-  )
-}
+  );
+};
 
 export default CreatureDetails;
